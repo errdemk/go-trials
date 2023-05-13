@@ -17,9 +17,10 @@ func main() {
     fmt.Println(quote.Hello())
 
     message1, err1 := greetings.Hello("Captain Price")
-    if err1 == nil {
-        fmt.Println(message1)
+    if err1 != nil {
+        log.Fatal(err1)
     }
+    fmt.Println(message1)
 
     message2, err2 := greetings.Hello("")
     if err2 != nil {
